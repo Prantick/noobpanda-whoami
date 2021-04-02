@@ -7,11 +7,11 @@ For more visit: [App-Shell](https://angular.io/guide/app-shell)
 
 ## Project Plans
 
-`Project-v1` : Current Application : Status Done
-`Project-v2` : Add Service Worker to the project and make an offline first PWA
-`Project-v3` : Add Backend API's to support blogs and content. // Major Release
-`Project-v4` : Add WebRTC to the project to support video calling and chat support.
-`Project-v5` : Add a simple game using Web Workers.
+- [x] `Release-v1` : Current Application : Status Done
+- [ ] `Release-v2` : Add Service Worker to the project and make an offline first PWA
+- [ ] `Release-v3` : Add Backend API's to support blogs and content. // Major Release
+- [ ] `Release-v4` : Add WebRTC to the project to support video calling and chat support.
+- [ ] `Release-v5` : Add a simple game using Web Workers.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
