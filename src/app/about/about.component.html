@@ -1,0 +1,20 @@
+<section class="about-cards" [ngClass]="{'dark-secondary':theme}" *ngIf="data">
+    <aside class="basic-info mat-elevation-z0 outline connect">
+        <div class="link-head mat-caption" [ngClass]="{'dark-accent':theme, 'light-tertiary':!theme}">
+            Connect with me on
+        </div>
+        <div class="links">
+            <a mat-mini-fab color="primary" *ngFor="let mediaLink of mediaLinks" [href]="mediaLink.url" target=”_blank” [attr.aria-label]="mediaLink.name"
+                [matTooltip]="mediaLink.url" [matTooltipPosition]="mini ? 'below': 'right'" (mouseenter)="mediaLink.focus=true" (mouseleave)="mediaLink.focus=false">
+                <fa-icon [icon]="mediaLink.icon" [spin]="mediaLink.focus"></fa-icon>
+            </a>
+        </div>
+    </aside>
+    <div class="salutation mat-elevation-z0 outline mat-body">
+        <p>
+            <mat-icon class="rotate" [ngClass]="{'dark-accent':theme, 'light-accent':!theme}"> format_quote</mat-icon>
+            {{introduction}}
+            <mat-icon style="margin-top: -20px;" [ngClass]="{'dark-accent':theme, 'light-accent':!theme}"> format_quote</mat-icon>
+        </p>
+    </div>
+</section>

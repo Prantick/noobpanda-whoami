@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "githubPage": {
+    "noobPanda": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/githubPage",
+            "outputPath": "dist/noobPanda/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -41,7 +42,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
@@ -65,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "githubPage:build"
+            "browserTarget": "noobPanda:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "githubPage:build:production"
+              "browserTarget": "noobPanda:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "githubPage:build"
+            "browserTarget": "noobPanda:build"
           }
         },
         "test": {
@@ -102,7 +103,8 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "e2e/tsconfig.json",
+              "tsconfig.server.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -113,16 +115,51 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "githubPage:serve"
+            "devServerTarget": "noobPanda:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "githubPage:serve:production"
+              "devServerTarget": "noobPanda:serve:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/noobPanda/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "noobPanda:build",
+            "serverTarget": "noobPanda:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "noobPanda:build:production",
+              "serverTarget": "noobPanda:server:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "githubPage"
+  "defaultProject": "noobPanda"
 }

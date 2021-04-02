@@ -1,0 +1,29 @@
+<section class="experience" *ngIf="data">
+    <div class="icons">
+        <button mat-fab color="primary" [ngClass]="{'mat-mini-fab':mini, 'beat':data[0].focus}" (click)="retrieveData(0)"> 
+            <mat-icon>school</mat-icon>
+        </button>
+        <span class="line"></span>
+        <ng-container *ngFor="let a of data | exptype">
+            <button mat-fab color="primary" [ngClass]="{'mat-mini-fab':mini, 'beat':data[a.index].focus}" (click)="retrieveData(a.index)">
+                <mat-icon>business</mat-icon>
+            </button>
+            <span class="line"></span>
+        </ng-container>
+        <span style="align-self: center;"> || </span>
+        <span class="line"></span>
+        <button mat-fab color="primary" [ngClass]="{'mat-mini-fab':mini, 'beat':data[data.length-1].focus}" (click)="retrieveData(data.length-1)">
+            <mat-icon>stars</mat-icon>
+        </button>
+    </div>
+    <mat-card class="description mat-elevation-z6" [ngClass]="{'light-card':!theme}">
+        <span class="w-name">
+            {{viewDescription.name}}
+        </span>
+        <ul class="w-details" [ngClass]="{'dark-tertiary':theme, 'light-tertiary':!theme}">
+            <li *ngIf="viewDescription.type!=='goal'">{{viewDescription.yearStart+" - "}}{{viewDescription.yearEnd ==="" ? "present" : viewDescription.yearEnd}}</li>
+            <li>{{viewDescription.role}}</li>
+            <li *ngIf="viewDescription.type!=='goal'">{{viewDescription.location}}</li>
+        </ul>
+    </mat-card>
+</section>

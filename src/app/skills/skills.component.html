@@ -1,0 +1,17 @@
+<section class="skills" *ngIf="data">
+  <button mat-icon-button (click)="navStatement('left')" [disabled]='!leftEnable' class="nav-icon-left" color="accent">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <section class="statement">
+    <div style="margin-bottom: 20px;" [ngClass]="{'dark-accent':theme, 'light-accent':!theme}">
+      <span *ngFor="let a of ascii">
+        <pre style="margin: 0px;">{{a}}</pre>
+      </span>
+    </div>
+    <span [ngClass]="{'dark-secondary':theme, 'light-secondary':!theme}">{{viewStatement}}</span>
+  </section>
+  <button mat-icon-button (click)="navStatement('right')" [disabled]="!rightEnable" class="nav-icon-right"
+    color="accent">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</section>

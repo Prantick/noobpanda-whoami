@@ -1,0 +1,97 @@
+<button mat-fab class='filter' color="accent" [matMenuTriggerFor]="filterMenu">
+    <mat-icon>filter_list</mat-icon>
+</button>
+<mat-menu #filterMenu="matMenu" yPosition="above" >
+    <mat-radio-group mat-menu-item aria-label="Select an option" class="filter-menu" [(ngModel)]="selectedFilter" (change)="filterProjects($event)">
+        <mat-radio-button value="all">All</mat-radio-button>
+        <mat-radio-button value="featured">Featured</mat-radio-button>
+        <mat-radio-button value="work">Work</mat-radio-button>
+        <mat-radio-button value="school">College</mat-radio-button>
+        <mat-radio-button value="personal">Personal</mat-radio-button>
+    </mat-radio-group>
+</mat-menu>
+<section class="project" *ngIf="data">
+    <mat-card class="project-card mat-elevation-z8" *ngFor="let project of displayProjects; let i = index" [ngClass]="{'light-card':!theme}">
+        <span class="featured">
+            <span class="title-head" [ngClass]="{'dark-primary':theme,'light-primary':!theme}">{{project.type}} <span *ngIf="project.view!=='name'">{{": " + project.view |
+                    titlecase}}</span></span>
+            <mat-icon [matTooltip]="'More'" [matTooltipPosition]="'right'" [matMenuTriggerFor]="moreMenu"
+                style="cursor:pointer" color="accent">more_vert
+            </mat-icon>
+            <mat-menu #moreMenu="matMenu" class="links">
+                <a mat-menu-item [href]="project.url.attachmentLink" target=”_blank” [disabled]='project.url.attachmentLink === ""' *ngIf="!project.flags.official">
+                    <mat-icon>attach_file</mat-icon>
+                    <span>Attachment</span>
+                </a>
+                <a mat-menu-item [href]="project.url.githubUrl" target=”_blank” [disabled]='project.url.githubUrl === ""' *ngIf="!project.flags.official">
+                    <mat-icon>
+                        <fa-icon [icon]="faGithub" style="font-size: x-large;"></fa-icon>
+                    </mat-icon>
+                    <span>GitHub</span>
+                </a>
+                <a mat-menu-item [href]="project.url.projectUrl" target=”_blank” [disabled]='project.url.projectUrl===""' *ngIf="!project.flags.official">
+                    <mat-icon>launch</mat-icon>
+                    <span>Open App</span>
+                </a>
+                <a mat-menu-item [href]="project.url.projectUrl" target=”_blank” [disabled]='project.url.projectUrl' *ngIf="project.flags.official">
+                    <mat-icon>warning</mat-icon>
+                    <span>Confidential</span>
+                </a>
+            </mat-menu>
+        </span>
+        <span class="title" [ngClass]="{'dark-secondary':theme, 'light-secondary':!theme}">
+            <button mat-icon-button (click)='navigate("left", i, project.view)' [disabled]='project.view==="name"'
+                class="nav-icon" color="accent">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <div class="title-name" *ngIf="project.view==='name'">
+                {{project.name}}
+            </div>
+            <div class="title-name" *ngIf="project.view==='role'">
+                {{project.role}}
+            </div>
+            <div class="title-name" *ngIf="project.view==='review'">
+                {{project.review}}
+            </div>
+            <div class="title-name" *ngIf="project.view==='contd'">
+                {{project.contd}}
+            </div>
+            <div class="title-name" *ngIf="project.view==='contribution'">
+                <mat-chip-list style="text-align: left;">
+                    <mat-chip *ngFor="let c of project.contribution" selected color="primary">{{c}}</mat-chip>
+                </mat-chip-list>
+            </div>
+            <div class="title-name" *ngIf="project.view==='techStack'">
+                <mat-chip-list style="text-align: left;" >
+                    <mat-chip *ngFor="let t of project.techStack" selected color="primary">{{t}}</mat-chip>
+                </mat-chip-list>
+            </div>
+            <button mat-icon-button (click)='navigate("right", i, project.view)' [disabled]='project.view==="techStack"'
+                class="nav-icon" color="accent">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </span>
+        <mat-divider style="margin-bottom: 8px; position: relative;" [inset]="true"></mat-divider>
+        <span class="status">
+            <span class="timeline" [ngClass]="{'dark-tertiary':theme, 'light-tertiary':!theme}">{{project.timelineStart}} - {{project.timelineEnd || "..."}}</span>
+            <div class="status-icons">
+                <mat-icon color="accent" *ngIf='project.flags.featured' [matTooltip]="'Featured'"
+                    [matTooltipPosition]="'below'">
+                    stars</mat-icon>
+                <mat-icon *ngIf='project.flags.school' [matTooltip]="'University'" [matTooltipPosition]="'below'" color="accent">
+                    school
+                </mat-icon>
+                <mat-icon *ngIf='project.flags.personal' [matTooltip]="'Personal'" [matTooltipPosition]="'below'" color="accent">
+                    account_circle
+                </mat-icon>
+                <mat-icon *ngIf="project.flags.official" [matTooltip]="'Work'" [matTooltipPosition]="'below'" color="accent">
+                    work_outline
+                </mat-icon>
+                <mat-icon [matTooltip]="'Completed'" [matTooltipPosition]="'below'" class="finished" color="primary">
+                    done_all
+                </mat-icon>
+            </div>
+
+        </span>
+    </mat-card>
+</section>

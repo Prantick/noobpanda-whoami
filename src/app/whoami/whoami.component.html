@@ -1,0 +1,40 @@
+<section class="whoami" *ngIf="allData">
+    <div class="intro" [ngClass]="{'intro-project' : confirmSmallIndex}">
+        <img [src]="source" class="logo" alt="Prantick's Phi">
+        <div class="intro-box">
+            <div class="name" [ngClass]="{'dark-primary':theme, 'light-primary':!theme}">{{name}}</div>
+            <div class="bio" [ngClass]="{'dark-tertiary':theme, 'light-tertiary':!theme}">
+                {{quote}}
+            </div>
+        </div>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <mat-tab-group mat-align-tabs="center" class="info" (selectedIndexChange)="getIndex($event)"
+        animationDuration="700ms" *ngIf="allData">
+        <mat-tab label="About" *ngIf="allData.about">
+            <ng-template matTabContent>
+                <app-about [data]='allData.about' [theme]="theme"></app-about>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Experience" *ngIf="allData.experience" [disabled]="allData.experience.length===0">
+            <ng-template matTabContent>
+                <app-experience [data]='allData.experience' [theme]="theme"></app-experience>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Skills" *ngIf="allData.skills" [disabled]="allData.skills.length===0">
+            <ng-template matTabContent>
+                <app-skills [data]='allData.skills' [theme]="theme"></app-skills>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Projects" *ngIf="allData.projects" [disabled]="allData.projects.length===0">
+            <ng-template matTabContent>
+                <app-projects [data]='allData.projects' [theme]="theme"></app-projects>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Blogs" *ngIf="allData.blogs" [disabled]="allData.blogs.length===0">
+            <ng-template matTabContent>
+                <app-blogs [data]="allData.blogs" [theme]="theme"></app-blogs>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+</section>

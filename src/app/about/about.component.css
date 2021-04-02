@@ -1,0 +1,73 @@
+.about-cards{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 35vh;
+}
+.outline{
+    border: 1px solid #a3a1a14f;
+    border-radius: 5px;
+}
+.basic-info{
+    padding: 8px;
+}
+.salutation{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+    line-height: 1.85em;
+    /* color: #000000c9; */
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.link-head{
+    text-align: center;
+    font-size: small;
+    /* color: #0000008c; */
+}
+.dark >  .link-head{
+    color: black;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    align-items: center;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+@media(max-width:768px){
+    .basic-info{
+        padding: 8px;
+        flex:1;
+    }
+    .link-head{
+        font-size: small;
+    }
+    .outline{
+        border: none;
+    }
+    .links{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex:0;
+    }
+    .about-cards{
+        flex-direction: column-reverse;
+        height: 48vh;
+    }
+    .salutation{
+        margin: 8px 0 0 0;
+        border-bottom: 1px solid #c9c8c83d;
+    }
+}

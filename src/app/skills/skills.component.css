@@ -1,0 +1,27 @@
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    align-items: center;
+    text-align: center;
+    padding: 0 36px;
+    justify-content: center;
+    font-size: larger;
+  }
+.nav-icon-left{
+  position: absolute;
+  top:50%;
+  left:0;
+  z-index:2
+}
+.nav-icon-right{
+  position: absolute;
+  top:50%;
+  right:0;
+  z-index: 2;
+}
+@media(max-width:768px){
+  .skills{
+    font-size: medium;
+  }
+}

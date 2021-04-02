@@ -1,0 +1,89 @@
+.dark{
+    color: #fdfdfd;
+}
+.dark-background{
+    background-color: #212121
+  }
+.dark-card{
+    background-color: #303030;
+  }
+.light-background{
+    background-color: #cfd8dc;
+}
+.light-card{
+    background-color: #ECEFF1;
+}
+.view-port{
+    padding: 2vh;
+    height: 96vh;
+    overflow: hidden;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+    border-radius: 10px;
+}
+.titlebar{
+    width: 100%;
+    height: 30px;
+    background-color: #424242;
+    border-radius: 10px 10px 0px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titlebar > div{
+    display: flex;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    border-radius: 0 0 10px 10px;
+}
+.nav-name{
+    margin-left: 10px;
+    color: #f2f2f2;
+}
+.nav-buttons{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red{
+    margin-left: 6px;
+    background-color: #e74b3b;
+}
+.yellow{
+    margin-left: 6px;
+    background-color: #f2c40e;
+}
+.green{
+    margin-left: 6px;
+    background-color:#2ecc71;
+}
+.command{
+    align-self: flex-start;
+    margin-left: 2px;
+    animation: appear 200ms ease-in 1;
+}
+.blink{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.load-content{
+    animation: appear 800ms 1;
+    animation-timing-function: ease-in;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

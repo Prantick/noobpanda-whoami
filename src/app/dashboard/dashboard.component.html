@@ -1,0 +1,27 @@
+<div class="view-port mat-app-background" [ngClass]="{'dark-background':theme, 'light-background':!theme ,'dark':theme}">
+    <section class="mat-elevation-z8 cards" [ngClass]="{'dark-card':theme, 'light-card':!theme}">
+        <section class="titlebar">
+            <div>
+                <span class="nav-buttons red"></span>
+                <span class="nav-buttons yellow"></span>
+                <span class="nav-buttons green"></span>
+                <span class="nav-name">noobpanda@github</span>
+            </div>
+            <div style="margin-right: 5px;">
+                <mat-icon matTooltip="More" matTooltipPosition="below" [matMenuTriggerFor]="moreMenu"
+                    style="cursor:pointer" [color]="theme ? 'accent' : ''" [ngClass]="{'dark-primary':!theme}">more_vert
+                </mat-icon>
+                <mat-menu #moreMenu="matMenu" class="links">
+                    <span mat-menu-item><mat-slide-toggle (change)="changeTheme($event)" [checked]="makeItDark">{{themeApplied}}</mat-slide-toggle></span>
+                </mat-menu>
+            </div>
+        </section>
+        <section class="content">
+            <span class="command" [ngClass]="{'dark-secondary':theme, 'light-secondary':!theme}">
+                noobpanda@github ~ $ : whoami
+            </span>
+            <app-whoami class="load-content" [theme]="theme"></app-whoami>
+        </section>
+
+    </section>
+</div>

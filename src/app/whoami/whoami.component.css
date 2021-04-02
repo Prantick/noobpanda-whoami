@@ -1,0 +1,118 @@
+.whoami{
+    display: flex;
+    flex-direction: column;
+    min-height:85vh;
+}
+
+.logo{
+    box-shadow: 0px 156px 49px -100px rgba(26,25,25,0.56);
+    width: 125px;
+    height: 125px;
+    display: block;
+    border-radius: 50%;
+    align-self: center;
+    border:0;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;  
+    padding: 2px 16px 16px 16px;
+}
+.intro-box{
+    display: block;
+    align-self: center;
+    z-index:0;
+    padding: 20px 0 0px 0;
+    line-height: 2.5em;
+}
+.name{
+    font-size: xx-large;
+    font-weight: 100;
+    animation: appear 500ms 1;
+    animation-timing-function: ease-in;
+}
+.bio{
+    line-height: 1.75em;
+    font-size: medium;
+}
+.divider{
+    width: 70%;
+    align-self: center;
+}
+.info{
+    width: 65%;
+    align-self: center;
+}
+
+.intro-project{
+    flex-direction: row;
+    text-align: left;
+    animation: appear 200ms 1;
+    animation-timing-function: ease-in-out;
+}
+.intro-project .intro-box{
+    padding: 0;
+}
+.intro-project .logo{
+    width: 75px;
+    height: 75px;
+    align-self: flex-start;
+    animation: appear 200ms 1;
+    animation-timing-function: ease-in-out;
+}
+.intro-project .name{
+    font-size: large;
+    margin-left: 8px;
+    animation: appear 200ms 1;
+    animation-timing-function: ease-in-out;
+}
+.intro-project .bio{
+    font-size: medium;
+    line-height: 1.5em;
+    margin-left: 8px;
+    animation: appear 200ms 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media(max-width:768px){
+    .logo{
+        height: 75px;
+        width: 75px;
+    }
+    .name{
+        font-size: medium;
+    }
+    .intro-project .name{
+        font-size: medium;
+    }
+    .bio{
+        font-size: small;
+        line-height: 1.5em;
+        font-weight: 100;
+    }
+    .intro-project .bio{
+        font-size: small;
+    }
+    .intro-box{
+        padding: 5px;
+        flex:1
+    }
+    .info{
+        width: 100%;
+    }
+    .divider{
+        width: 100%;
+    }
+    .intro{
+        padding: 8px;
+    }
+}

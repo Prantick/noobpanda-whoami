@@ -1,0 +1,369 @@
+{
+    "about": {
+        "name":"Prantick Das",
+        "intro": "Hi there! virtual friend from planet earth; Meet me, I am Prantick, just another conscious being, with a purpose of creating an impactful ambience in this wonderful world, during my borrowed time. Have fun exploring. Peace.",
+        "links": {
+            "gmail": "mailto:krsnaprantick@gmail.com",
+            "linkedin": "https://linkedin.com/in/prantick",
+            "github": "https://github.com/prantick",
+            "twitter": "https://twitter.com/_NoobPanda_"
+        }
+    },
+    "experience": [
+        {
+            "type": "university",
+            "name": "Assam Engineering College",
+            "yearStart": "2015",
+            "yearEnd": "2019",
+            "role": "Computer Science and Engineering",
+            "location": "Assam, India"
+        },
+        {
+            "type": "office",
+            "name": "Infosys Ltd.",
+            "yearStart": "2019",
+            "yearEnd": "",
+            "role": "Systems Engineer",
+            "location": "Bhubaneswar, India"
+        },
+        {
+            "type": "goal",
+            "name": "Mystery",
+            "role": "Have some ideas, we can talk... Cool ideas resonates me 😊"
+        }
+    ],
+    "projects": [
+        {
+            "type": "Front-end Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": false,
+                "official": true,
+                "complete": false
+            },
+            "techStack": [
+                "Angular",
+                "AngularJS"
+            ],
+            "name": "\"Rebuild: AngularJS to Angular 8\"",
+            "review": "Complete conversion of existing Java Based Monolithic AngularJS Application to Microservice based Angular 8 application.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Testing"
+            ],
+            "role": "Systems Engineer at Infosys Limited.",
+            "timelineStart": "Jan, 2021",
+            "timelineEnd": ""
+        },
+        {
+            "type": "Back-end Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": false,
+                "official": true,
+                "complete": true
+            },
+            "techStack": [
+                "Java",
+                "Spring Boot"
+            ],
+            "name": "\"Build: Java Microservices\"",
+            "review": "Worked on building API’s primely designed and focussed to support and provide real time data delivery to other microservices.",
+            "contribution": [
+                "Development"
+            ],
+            "role": "Systems Engineer at Infosys Limited.",
+            "timelineStart": "Sep, 2020",
+            "timelineEnd": "Dec, 2020"
+        },
+        {
+            "type": "Full Stack Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": "http://103.241.146.57/gis_frontend/"
+            },
+            "flags": {
+                "featured": false,
+                "personal": true,
+                "school": false,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "Angular",
+                "MySQL",
+                "Leaflet Maps"
+            ],
+            "name": "\"Monitoring Data Analytics System\"",
+            "review": "Developed REST API microservice for displaying data over a customized choropleth map built over Leaflet Angular",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Testing"
+            ],
+            "role": "Remote: Full Stack Developer at Gratia Technology Pvt. Ltd.",
+            "timelineStart": "July, 2019",
+            "timelineEnd": "Dec, 2019"
+        },
+        {
+            "type": "Research & Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": true,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "React",
+                "Firebase"
+            ],
+            "name": "\"Real-time transport route state forecasting, using smart resource allocation techniques and dynamic routing.\"",
+            "review": "Modelled an algorithm for dynamic routing technique using windowed time frames and weights which enabled calculation for the most suitable route to take, considering various parameters with the help of pre-processed data and a prebuilt trained model.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Testing"
+            ],
+            "role": "Team Member: Final Semester Project.",
+           
+            "timelineStart": "Feb, 2019",
+            "timelineEnd": "June, 2019"
+        },
+        {
+            "type": "Smart India Hackathon",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "React",
+                "Android: Java",
+                "Python"
+            ],
+            "name": "“Smart Intra City Transport Management System”",
+            "review": "Introduced the idea using carpooling techniques, which is managed by dynamic routing algorithms, based on weights collected by a pretrained prediction model. Developed a prototype which decides the routes, given required parameters and suitable weights.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Presentation"
+            ],
+            "role": "Team Leader: CICADA_3301",
+            "timelineStart": "Dec, 2018",
+            "timelineEnd": "Mar, 2019"
+        },
+        {
+            "type": "Full Stack Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": true,
+                "school": false,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "React",
+                "MySQL"
+            ],
+            "name": "\"College’s Web App Upgradation\"",
+            "review": "Developed microservices and middleware for backend with complete remodelling and restructuring of schemas. Also, designed the landing page.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Testing"
+            ],
+            "role": "Full Stack Developer at COREXX",
+            "timelineStart": "July, 2018",
+            "timelineEnd": "March, 2019"
+        },
+        {
+            "type": "Research & Development",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "Python",
+                "Deep Learning with Python"
+            ],
+            "name": "\"Anomaly Detection using Deep Learning\"",
+            "review": "Researched on the topic of anomaly detection using deep learning techniques.",
+            "contribution": [
+                "Ideation",
+                "Prototyping"
+            ],
+            "role": "Team Member: Semester Project",
+            "timelineStart": "Sep, 2018",
+            "timelineEnd": "Nov, 2018"
+        },
+        {
+            "type": "Internship",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "MongoDB",
+                "ReactJs"
+            ],
+            "name": "\"Intra-Email Service\"",
+            "review": "Complete Rebuild using modern technology stack. Redesigned the User Interface for a feature rich experience. Introduced new features like instant messaging, to do, sort, filter, announcements are added to improve productivity.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Testing"
+            ],
+            "role": "Intern at Indian Oil Corporation Limited.",
+            "timelineStart": "June, 2018",
+            "timelineEnd": "July, 2018"
+        },
+        {
+            "type": "Smart India Hackathon",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "MongoDB",
+                "Android: Java",
+                "Scala"
+            ],
+            "name": "\"Integrated Call Numbers and Prediction of Wildfires & Earthquakes\"",
+            "review": "Ideated a system that can work without cellular network. Developed a well-equipped cross platform application with features of real time alarm and push notifications across targeted audience, and an integrated emergency call system.",
+            "contribution": [
+                "Ideation",
+                "Prototyping",
+                "Development",
+                "Presentation"
+            ],
+            "role": "Team-Lead: Olympus",
+            "timelineStart": "Nov, 2017",
+            "timelineEnd": "June, 2018"
+        },
+        {
+            "type": "College Event",
+            "url": {
+                "githubUrl": "",
+                "attachmentLink": "",
+                "projectUrl": ""
+            },
+            "flags": {
+                "featured": false,
+                "personal": false,
+                "school": true,
+                "official": false,
+                "complete": true
+            },
+            "techStack": [
+                "NodeJs",
+                "MongoDB",
+                "EJS Template Engine"
+            ],
+            "name": "“Treasure Trove: The Finder’s Game”",
+            "review": "Developed a cross-platform application to support the event and lead the team to make a successful breakthrough towards the end of it.",
+            "contribution": [
+                "Ideation",
+                "Development",
+                "Event Organizing"
+            ],
+            "role": "Team-Lead: The Finders Game",
+            "timelineStart": "Jan, 2017",
+            "timelineEnd": "Jan, 2017"
+        }
+    ],
+    "skills":[
+        {
+            "statement":"I can speak languages of the web. Advice: Beware of the spider if you are a bug.",
+            "ascii":[" \\_______/","`.,-'\\_____/`-.,'"," /`..'\\ _ /`.,'\\","/  /`.,' `.,'\\  \\","  /__/__/     \\__\\__\\__","\\  \\  \\     /  /  /"," \\  \\,'`._,'`./  /","  \\,'`./___\\,'`./"," ,'`-./_____\\,-'`.","  /       \\"]
+        },
+        {
+            "statement": "I like wires being connected to the clouds. It rains bytes.",
+            "ascii":["    .-~~~-.",".- ~ ~-(       )_ _"," /                     ~ -.","|                           \\","\\                         .'","~- . _____________ . -~"]
+        },
+        {
+            "statement":"Sometimes solving puzzles, requires me to go Back To Basics. Basics are like early morning exercise.",
+            "ascii":[".--.--.--.  .--.--.","|     |        |  |",":  :--:  :  :  :  :","|  |     |  |     |",":  :  :  :--:--:--:","|  |  |           |",":  :  :--:--:--:  :","|  |        |  |  |",":  :--:--:  :  :  :","|     |     |  |  |",":--:  :  :--:  :  :","|        |        |",":  :--:--:--:--:--:"]
+        },
+        {
+            "statement":"I believe opening jars is a thing for Enterprises. Am I right?",
+            "ascii":["    __   __            "," |  | |  |     __  ","   |  | |  |  _  | |__ "," __|  | |  |_| | | |  |","|  |  | |  | | __| |  |","|  |  |^|  | ||  | |  |","|  |  |||  | ||  | |  |","~~~~~~~~~~~~~~~~~~~~"]
+        },
+        {
+            "statement":"The snake is an easy tool to direct the box. Follow the snake !!",
+            "ascii":["           /^\\/^\\","         _|__|  O|","\\/     /~     \\_/ \\"," \\____|__________/  \\","        \\_______      \\","                |     |","               /      /","              /     /  ","         /     /","       /     /   ","               /     /           _-~","            (      (        _-~ ","              \\      ~-____-~    _-","                ~-_           _-~  ","              ~--______-~"]
+        },
+        {
+            "statement":"I like scribbling my thoughts. I call it Abode of imagination.",
+            "ascii":[" __/\\__ ", "  \\    /   ", "__/\\__/    \\__/\\__", "\\                /", "/_              _\\","\\            /","__/            \\__ ","\\                /","/_  __      __  _\\","\\/  \\    /  \\/","/_  _\\","\\/"]
+        }
+    ],
+    "blogs":[]
+}

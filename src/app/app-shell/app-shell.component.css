@@ -1,0 +1,86 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .bar {
+    display: block;
+    width: 300px;
+    height: 0.2em;
+    background-color: #e0f7fa;
+    overflow: hidden;
+  }
+  .filled-bar {
+    display: block;
+    height: 0.2em;
+    background-color: #00bcd4;
+    animation-name: move-bar;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
+  }
+  @keyframes move-bar {
+    from {
+      left: 0px;
+      width: 0%;
+    }
+    to {
+      left: 300px;
+      width: 100%;
+    }
+  }
+  .stage {
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+  }
+  .sphere {
+    display: block;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px, #00bcd4, #000);
+  }
+  .logo {
+      width: 25%;
+      height: 35%;
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #f2f2f2;
+      transform: translateX(130px) translateY(25px) skewX(20deg) skewY(-4deg);
+      z-index: 2;
+  }
+  .sphere:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8) 14%,
+      rgba(255, 255, 255, 0) 24%
+    );
+    transform: translateX(-90px) translateY(-70px) skewX(-20deg);
+    filter: blur(10px);
+  }
+  
+  .sphere-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0) 50%
+    );
+    transform: rotateX(90deg) translateZ(-100px) translateX(-40px);
+    z-index: -1;
+  }
+  

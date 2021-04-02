@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.dark-primary {
+  color: #fdfdfd;
+}
+.dark-secondary {
+  color: #cfd2d6;
+}
+.dark-tertiary {
+  color: #cfcfcf;
+}
+.dark-accent {
+  color: #888888;
+}
+.light-primary {
+  color: #3c3c3c;
+}
+.light-secondary {
+  color: #606060;
+}
+.light-tertiary {
+  color: #818181;
+}
+.light-accent {
+  color: #c2c2c2;
+}
