@@ -29,10 +29,11 @@ import { FormsModule } from '@angular/forms';
     SkillsComponent,
     BlogsComponent,
     WhoamiComponent,
-    ExptypePipe
+    ExptypePipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
@@ -40,9 +41,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MaterialModule,
     FontAwesomeModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [FetchdataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
